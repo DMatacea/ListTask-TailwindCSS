@@ -7,7 +7,7 @@ export const CreateApiCohereProvider = ({ children }) => {
     async function getCohereChatResponse(prompt) {
         const apiKey = import.meta.env.VITE_DEEPSEEK_API_KEY
         const controller = new AbortController()
-        const timeoutId = setTimeout(() => controller.abort(), 10000)
+        const timeoutId = setTimeout(() => controller.abort(), 15000)
     
         try {
             const response = await fetch('https://api.cohere.com/v2/chat', {

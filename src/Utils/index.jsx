@@ -60,3 +60,17 @@ export function getDate() {
 
     return `${dia}/${mes}/${año}`
 }
+
+
+/**
+ * Funcion para la hora actual
+ *
+ * @returns {Text} - La funcion retorna la hora actual 12:00 horas.
+ */
+export function getFormattedTime() {
+    return new Intl.DateTimeFormat("en-US", {
+        hour: "numeric",
+        minute: "numeric",
+        hour12: true,
+    }).format(new Date());
+}
