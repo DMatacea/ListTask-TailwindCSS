@@ -10,7 +10,7 @@ function Doing() {
             {context.tasks.map((task) => (
                 <li
                     key={task.id}
-                    className={`${task.completed ? 'flex' : 'hidden' } items-center justify-between my-[12px] p-3 bg-white rounded-lg shadow-sm`}
+                    className={`${!task.completed ? 'flex' : 'hidden' } items-center justify-between my-[12px] p-3 bg-white rounded-lg shadow-sm`}
                 >
                     <div className="flex items-center">
                         {/* Checkbox para marcar la tarea como completada */}
